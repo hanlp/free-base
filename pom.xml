@@ -11,6 +11,10 @@
     <properties>
         <lombok.version>1.16.10</lombok.version>
         <fastjson.version>1.2.70</fastjson.version>
+        <guava.version>20.0</guava.version>
+        <jol-core.version>0.11</jol-core.version>
+        <mchange-commons-java.version>0.2.11</mchange-commons-java.version>
+        <joda-time.version>2.9.1</joda-time.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -22,11 +26,34 @@
             </dependency>
 
             <dependency>
-                  <groupId>com.alibaba</groupId>
-                    <artifactId>fastjson</artifactId>
-                    <version>${fastjson.version}</version>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openjdk.jol</groupId>
+                <artifactId>jol-core</artifactId>
+                <version>${jol-core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mchange</groupId>
+                <artifactId>mchange-commons-java</artifactId>
+                <version>${mchange-commons-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
@@ -40,6 +67,25 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>mchange-commons-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
         </dependency>
     </dependencies>
 </project>
