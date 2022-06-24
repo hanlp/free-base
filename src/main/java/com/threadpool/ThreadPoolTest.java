@@ -14,8 +14,8 @@ public class ThreadPoolTest {
 //        newSingle();
 //        newFixed();
 //        newCached();
-//        newScheduled()
-        newFormal();
+        newScheduled();
+//        newFormal();
     }
 
     private static void newFormal() throws Exception {

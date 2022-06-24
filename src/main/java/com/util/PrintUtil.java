@@ -20,17 +20,22 @@ public class PrintUtil {
     }
 
     private static String resolveMsg(String msg, Object... args) {
-        if (msg == null) {
-            return null;
-        }
-        if (msg.contains(key)) {
-            for (Object a : args) {
-                msg = msg.replaceFirst(regex, a.toString());
+        try {
+            if (msg == null) {
+                return null;
             }
-            return msg;
-        } else {
-            return msg;
+            if (msg.contains(key)) {
+                for (Object a : args) {
+                    msg = msg.replaceFirst(regex, a == null ? "null" : a.toString());
+                }
+                return msg;
+            } else {
+                return msg;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return msg;
     }
 
     public static void println(Object object) {
